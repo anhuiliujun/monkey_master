@@ -32,6 +32,28 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# 监控
+gem 'god'
+
+# app server
+gem 'puma'
+
+gem 'redis', '~> 3.2.1'
+gem "hiredis", "~> 0.6.0"
+# Redis 命名空间
+gem 'redis-namespace','~> 1.5.1'
+# 将一些数据存放入 Redis
+gem 'redis-objects', '1.1.0'
+
+# YAML 配置信息
+gem 'settingslogic', '~> 2.0.9'
+
+# 队列
+gem 'sidekiq', '3.3.4'
+# Sidekiq Web
+gem 'sinatra', '>= 1.3.0', :require => nil
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
